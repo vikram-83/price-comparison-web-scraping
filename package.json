@@ -1,0 +1,21 @@
+{
+  "name": "price-comparison-web-scraping",
+  "version": "1.0.0",
+  "description": "Smart price comparison platform with auth, wishlist, alerts, and AI recommendations",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/node/server.js",
+    "dev": "nodemon backend/node/server.js"
+  },
+  "keywords": ["price-comparison", "scraper", "jwt", "wishlist", "reviews"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.1",
+    "uuid": "^9.0.0"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "users": [
+    {
+      "id": "0def1396-abb2-4b29-9eff-cc4665428a4b",
+      "name": "Google User",
+      "email": "google.user@example.com",
+      "profileImage": "https://via.placeholder.com/120x120.png?text=G",
+      "passwordHash": null,
+      "googleId": "0def1396-abb2-4b29-9eff-cc4665428a4b",
+      "wishlist": [
+        {
+          "price": 499,
+          "site": "PS",
+          "productId": "test-ps-1",
+          "name": "PS Test Item"
+        },
+        {
+          "productId": "amazon-mobile",
+          "site": "Amazon",
+          "name": "Mobile (Amazon)",
+          "price": 41053,
+          "link": "https://amazon.in",
+          "image": "/assets/amazon.svg",
+          "rating": 4.4,
+          "reviewCount": 845,
+          "priceHistory": [
+            {
+              "date": "2026-04-18",
+              "price": 39267
+            },
+            {
+              "date": "2026-04-19",
+              "price": 39525
+            },
+            {
+              "date": "2026-04-20",
+              "price": 40118
+            },
+            {
+              "date": "2026-04-21",
+              "price": 41436
+            },
+            {
+              "date": "2026-04-22",
+              "price": 42095
+            },
+            {
+              "date": "2026-04-23",
+              "price": 40650
+            },
+            {
+              "date": "2026-04-24",
+              "price": 41405
+            }
+          ],
+          "discount": 22,
+          "description": "Fast delivery, strong seller rating and best-seller pricing from Amazon.",
+          "lowestPrice": false,
+          "priceTag": "₹41,053",
+          "bestDeal": false,
+          "savings": "Save 22%"
+        },
+        {
+          "productId": "meesho-tv",
+          "site": "Meesho",
+          "name": "tv (Meesho)",
+          "price": 29531,
+          "link": "https://meesho.com",
+          "image": "https://via.placeholder.com/320x200.png?text=Meesho",
+          "rating": 4.2,
+          "reviewCount": 348,
+          "priceHistory": [
+            {
+              "date": "2026-04-18",
+              "price": 29436
+            },
+            {
+              "date": "2026-04-19",
+              "price": 29299
+            },
+            {
+              "date": "2026-04-20",
+              "price": 28825
+            },
+            {
+              "date": "2026-04-21",
+              "price": 30404
+            },
+            {
+              "date": "2026-04-22",
+              "price": 30142
+            },
+            {
+              "date": "2026-04-23",
+              "price": 30360
+            },
+            {
+              "date": "2026-04-24",
+              "price": 28529
+            }
+          ],
+          "discount": 14,
+          "description": "Affordable and reliable seller rating from Meesho.",
+          "lowestPrice": false,
+          "priceTag": "₹29,531",
+          "bestDeal": false,
+          "savings": "Save 14%"
+        }
+      ],
+      "recentViews": [],
+      "alerts": [],
+      "createdAt": "2026-05-03T12:54:53.019Z"
+    },
+    {
+      "id": "f2fffda8-f5a0-4d92-b126-b3ca22f8fbb3",
+      "name": "Vikram Chaudhari",
+      "email": "vikramchaudhari834@gmail.com",
+      "passwordHash": "$2a$10$buXPZ1xmRMuLW03WGdO7QeGpFB/xet9HPPo.ZY.AzFyH3pAxHOTLW",
+      "googleId": null,
+      "wishlist": [
+        {
+          "productId": "amazon-shoese",
+          "site": "Amazon",
+          "name": "shoese (Amazon)",
+          "price": 47146,
+          "link": "https://amazon.in",
+          "image": "/assets/amazon.svg",
+          "rating": 4.4,
+          "reviewCount": 904,
+          "priceHistory": [
+            {
+              "date": "2026-04-18",
+              "price": 48335
+            },
+            {
+              "date": "2026-04-19",
+              "price": 47749
+            },
+            {
+              "date": "2026-04-20",
+              "price": 46240
+            },
+            {
+              "date": "2026-04-21",
+              "price": 47710
+            },
+            {
+              "date": "2026-04-22",
+              "price": 46159
+            },
+            {
+              "date": "2026-04-23",
+              "price": 47977
+            },
+            {
+              "date": "2026-04-24",
+              "price": 47449
+            }
+          ],
+          "discount": 20,
+          "description": "Fast delivery, strong seller rating and best-seller pricing from Amazon.",
+          "lowestPrice": false,
+          "priceTag": "₹47,146",
+          "bestDeal": false,
+          "offerPriceTag": "₹43,525",
+          "offerSavings": "Offer ₹3,621 off",
+          "savings": "Save 20%",
+          "discountText": "20% OFF",
+          "offerPrice": 43525
+        },
+        {
+          "productId": "amazon-mobile",
+          "site": "Amazon",
+          "name": "Mobile (Amazon)",
+          "price": 34144,
+          "link": "https://amazon.in",
+          "image": "/assets/amazon.svg",
+          "rating": 4.5,
+          "reviewCount": 1064,
+          "priceHistory": [
+            {
+              "date": "2026-04-18",
+              "price": 33930
+            },
+            {
+              "date": "2026-04-19",
+              "price": 33519
+            },
+            {
+              "date": "2026-04-20",
+              "price": 34171
+            },
+            {
+              "date": "2026-04-21",
+              "price": 33024
+            },
+            {
+              "date": "2026-04-22",
+              "price": 35505
+            },
+            {
+              "date": "2026-04-23",
+              "price": 33082
+            },
+            {
+              "date": "2026-04-24",
+              "price": 33876
+            }
+          ],
+          "discount": 25,
+          "description": "Fast delivery, strong seller rating and best-seller pricing from Amazon.",
+          "lowestPrice": false,
+          "priceTag": "₹34,144",
+          "bestDeal": false,
+          "offerPriceTag": "₹32,560",
+          "offerSavings": "Offer ₹1,584 off",
+          "savings": "Save 25%",
+          "discountText": "25% OFF",
+          "offerPrice": 32560
+        }
+      ],
+      "recentViews": [],
+      "alerts": [
+        {
+          "productId": "book",
+          "site": "book",
+          "threshold": 250,
+          "method": "Email",
+          "createdAt": "2026-05-23T09:24:11.172Z"
+        }
+      ],
+      "createdAt": "2026-05-03T13:07:38.500Z",
+      "profileImage": "/assets/avatar.svg"
+    }
+  ]
+}

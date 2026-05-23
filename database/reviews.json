@@ -1,0 +1,25 @@
+{
+  "reviews": [
+    {
+      "productId": "amazon-mobile",
+      "author": "Vikram Chaudhari",
+      "rating": 3,
+      "comment": "very beautoful theame",
+      "date": "2026-05-23"
+    },
+    {
+      "productId": "amazon-laptop",
+      "author": "Vikram Chaudhari",
+      "rating": 3,
+      "comment": "very beautoful theame",
+      "date": "2026-05-23"
+    },
+    {
+      "productId": "amazon-mobile",
+      "author": "Google User",
+      "rating": 2,
+      "comment": "very beautoful theame",
+      "date": "2026-05-03"
+    }
+  ]
+}

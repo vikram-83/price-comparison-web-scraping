@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceCompare | Smart Price Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">PriceCompare</div>
+        <nav>
+            <button class="ghost" onclick="openLogin()">Login</button>
+            <button class="primary" onclick="openSignup()">Sign Up</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow">Smart Price Comparison</p>
+            <h1>Find the best deals from Amazon, Flipkart, Meesho, and Myntra</h1>
+            <p>Live price comparison, wishlist, price history, alerts, reviews, sentiment analysis, and AI recommendations all in one dashboard.</p>
+            <div class="search-box">
+                <input id="search" placeholder="Search for smartphones, laptops, shoes..." autocomplete="off">
+                <button onclick="searchProduct()">Compare Prices</button>
+            </div>
+            <div class="quick-actions">
+                <button onclick="googleLogin()">Continue with Google</button>
+                <button onclick="loadRecommendations()">AI Recommendation</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="/assets/hero.svg" alt="Smart price comparison" />
+        </div>
+    </section>
+
+    <main class="layout">
+        <aside class="panel" id="userPanel">
+            <div class="panel-block" id="profileSummary"></div>
+            <div class="panel-block" id="wishlistBlock">
+                <h2>Wishlist</h2>
+                <div id="wishlistItems">No saved products yet.</div>
+            </div>
+            <div class="panel-block" id="recentBlock">
+                <h2>Recently Viewed</h2>
+                <div id="recentItems">Start a search to see recent products.</div>
+            </div>
+            <div class="panel-block" id="alertBlock">
+                <h2>Price Drop Alerts</h2>
+                <form onsubmit="saveAlert(event)">
+                    <input id="alertProduct" placeholder="Product or site" />
+                    <input id="alertThreshold" type="number" placeholder="₹ Threshold" />
+                    <select id="alertMethod">
+                        <option value="Email">Email</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                    </select>
+                    <button type="submit">Create Alert</button>
+                </form>
+                <div id="savedAlerts">No alerts yet.</div>
+            </div>
+        </aside>
+
+        <section class="results-area">
+            <div class="status-bar">
+                <div id="statusMessage">Search for a product to compare prices, reviews, and alerts.</div>
+                <div id="recommendationSummary"></div>
+            </div>
+            <div class="results-grid" id="results"></div>
+        </section>
+    </main>
+
+    <div class="modal" id="authModal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close" onclick="closeAuthModal()">×</button>
+            <div id="authForms"></div>
+        </div>
+    </div>
+
+    <div class="drawer" id="detailDrawer" aria-hidden="true">
+        <button class="close" onclick="closeDrawer()">×</button>
+        <div id="detailContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
