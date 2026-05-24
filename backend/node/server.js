@@ -3,7 +3,10 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://aapka-frontend-vercel-url.vercel.app', // <-- Yahan apna asli Vercel URL daalein
+    credentials: true
+}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', '..', 'frontend')));
 
