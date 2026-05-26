@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 
 app.use(cors({
-    origin: 'https://aapka-frontend-vercel-url.vercel.app', // <-- Yahan apna asli Vercel URL daalein
+    origin: 'https://price-comparison-web-scraping-qcb2.vercel.app', // <-- Yahan apna asli Vercel URL daalein
     credentials: true
 }));
 app.use(express.json());
