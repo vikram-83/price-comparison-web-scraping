@@ -1,4 +1,4 @@
-﻿const API_BASE = 'http://localhost:3000/api';
+﻿const API_BASE = 'https://price-comparison-web-scraping.onrender.com/api';
 let currentUser = null;
 let currentProduct = null;
 let currentToken = localStorage.getItem('priceCompareToken');
