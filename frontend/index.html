@@ -10,8 +10,11 @@
     <header class="topbar">
         <div class="brand">PriceCompare</div>
         <nav>
-            <button class="ghost" onclick="openLogin()">Login</button>
-            <button class="primary" onclick="openSignup()">Sign Up</button>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="product.html" class="nav-link">Products</a>
+            <a href="review.html" class="nav-link">Reviews</a>
+            <a href="about.html" class="nav-link">About</a>
+            <button class="ghost" onclick="logout()">Logout</button>
         </nav>
     </header>
 
@@ -25,8 +28,8 @@
                 <button onclick="searchProduct()">Compare Prices</button>
             </div>
             <div class="quick-actions">
-                <button onclick="googleLogin()">Continue with Google</button>
-                <button onclick="loadRecommendations()">AI Recommendation</button>
+                <button onclick="navigateTo('product')">View Products</button>
+                <button onclick="navigateTo('review')">View Reviews</button>
             </div>
         </div>
         <div class="hero-image">
@@ -81,6 +84,8 @@
         <div id="detailContent"></div>
     </div>
 
+    <script src="auth-system.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+

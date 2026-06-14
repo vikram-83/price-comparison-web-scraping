@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | PriceCompare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">PriceCompare</div>
+        <nav>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="review.html" class="nav-link">Reviews</a>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <h1>Create Account</h1>
+            <p class="auth-subtitle">Join PriceCompare and save money on every purchase</p>
+
+            <form class="auth-form" onsubmit="handleRegister(event)">
+                <div class="form-row-two">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Min. 8 characters" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" required>
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="terms" required>
+                    <span>I agree to the <a href="#" class="link">Terms & Conditions</a> and <a href="#" class="link">Privacy Policy</a></span>
+                </label>
+
+                <button type="submit" class="auth-button">Create Account</button>
+            </form>
+
+            <div class="divider">OR</div>
+
+            <div class="social-login">
+                <button type="button" class="social-btn" onclick="googleLogin()">
+                    <span>Sign up with Google</span>
+                </button>
+                <button type="button" class="social-btn" onclick="facebookLogin()">
+                    <span>Sign up with Facebook</span>
+                </button>
+            </div>
+
+            <p class="auth-footer">
+                Already have an account? 
+                <a href="login.html" class="link-bold">Sign in here</a>
+            </p>
+        </div>
+
+        <div class="auth-side">
+            <div class="side-content">
+                <h2>Why Join PriceCompare?</h2>
+                <p>Get the best deals with our smart price comparison tool</p>
+                <ul class="features-list">
+                    <li>✓ Compare prices instantly</li>
+                    <li>✓ Get price drop notifications</li>
+                    <li>✓ Read verified reviews</li>
+                    <li>✓ Save to wishlist</li>
+                    <li>✓ AI-powered recommendations</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth-system.js"></script>
+</body>
+</html>

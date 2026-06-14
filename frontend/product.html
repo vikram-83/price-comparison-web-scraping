@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail | PriceCompare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">PriceCompare</div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="product.html" class="nav-link active">Products</a>
+            <a href="review.html" class="nav-link">Reviews</a>
+            <a href="about.html" class="nav-link">About</a>
+            <button class="ghost" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="#">Products</a>
+                <span>/</span>
+                <span id="productBreadcrumb">Product Name</span>
+            </div>
+
+            <!-- Product Header -->
+            <div class="product-detail-header">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainImage" src="/assets/product-main.jpg" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="/assets/product-thumb-1.jpg" alt="Thumbnail 1" onclick="changeImage(this)">
+                        <img src="/assets/product-thumb-2.jpg" alt="Thumbnail 2" onclick="changeImage(this)">
+                        <img src="/assets/product-thumb-3.jpg" alt="Thumbnail 3" onclick="changeImage(this)">
+                        <img src="/assets/product-thumb-4.jpg" alt="Thumbnail 4" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <span class="category-badge">Electronics</span>
+                    <h1 id="productName">Product Name</h1>
+                    
+                    <div class="rating-section">
+                        <div class="stars-display">★★★★★ (2,543 reviews)</div>
+                        <p class="rating-text">Highly rated by customers</p>
+                    </div>
+
+                    <div class="price-section">
+                        <div class="price-item">
+                            <span class="platform-name">Amazon</span>
+                            <div class="price-display">
+                                <span class="current-price">₹25,999</span>
+                                <span class="original-price">₹32,999</span>
+                                <span class="discount">-21%</span>
+                            </div>
+                            <a href="#" class="buy-link" target="_blank">View on Amazon →</a>
+                        </div>
+
+                        <div class="price-item">
+                            <span class="platform-name">Flipkart</span>
+                            <div class="price-display">
+                                <span class="current-price">₹26,499</span>
+                                <span class="original-price">₹32,999</span>
+                                <span class="discount">-20%</span>
+                            </div>
+                            <a href="#" class="buy-link" target="_blank">View on Flipkart →</a>
+                        </div>
+
+                        <div class="price-item">
+                            <span class="platform-name">Myntra</span>
+                            <div class="price-display">
+                                <span class="current-price">₹27,999</span>
+                                <span class="original-price">₹32,999</span>
+                                <span class="discount">-15%</span>
+                            </div>
+                            <a href="#" class="buy-link" target="_blank">View on Myntra →</a>
+                        </div>
+                    </div>
+
+                    <div class="best-deal-banner">
+                        💚 Best Deal: ₹25,999 on Amazon
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="add-wishlist-btn">♡ Add to Wishlist</button>
+                        <button class="set-alert-btn">🔔 Set Price Alert</button>
+                    </div>
+
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <strong>Availability:</strong> In Stock
+                        </div>
+                        <div class="meta-item">
+                            <strong>Shipping:</strong> Free Shipping (2-3 days)
+                        </div>
+                        <div class="meta-item">
+                            <strong>Warranty:</strong> 1 Year Manufacturer Warranty
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <button class="tab-btn active" onclick="switchTab(event, 'description')">Description</button>
+                <button class="tab-btn" onclick="switchTab(event, 'specs')">Specifications</button>
+                <button class="tab-btn" onclick="switchTab(event, 'reviews')">Reviews</button>
+                <button class="tab-btn" onclick="switchTab(event, 'history')">Price History</button>
+            </div>
+
+            <!-- Description Tab -->
+            <div id="description" class="tab-content active">
+                <h2>Product Description</h2>
+                <p>
+                    Experience premium performance with the latest flagship smartphone. Featuring cutting-edge 
+                    technology, stunning display, and exceptional camera capabilities.
+                </p>
+                <h3>Key Features:</h3>
+                <ul class="features-list">
+                    <li>📱 6.7-inch Dynamic Island display with 120Hz refresh rate</li>
+                    <li>🔋 All-day battery life with fast charging support</li>
+                    <li>📸 Professional triple camera system with AI enhancements</li>
+                    <li>⚡ Powerful processor for seamless multitasking</li>
+                    <li>🛡️ Advanced security features and Face ID</li>
+                    <li>🎮 Gaming performance with thermal management</li>
+                </ul>
+            </div>
+
+            <!-- Specifications Tab -->
+            <div id="specs" class="tab-content">
+                <h2>Technical Specifications</h2>
+                <table class="specs-table">
+                    <tr>
+                        <td class="spec-key">Display</td>
+                        <td>6.7-inch OLED, 120Hz, 2796 x 1290 pixels</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-key">Processor</td>
+                        <td>Latest Gen Chipset, 8-core CPU</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-key">RAM</td>
+                        <td>8GB / 12GB options</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-key">Storage</td>
+                        <td>256GB / 512GB options</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-key">Camera</td>
+                        <td>48MP + 12MP + 12MP (Triple Rear), 12MP (Front)</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-key">Battery</td>
+                        <td>4685 mAh with 25W Fast Charging</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-key">OS</td>
+                        <td>Latest OS with 7 years of updates</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-key">Weight</td>
+                        <td>195 grams</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Reviews Tab -->
+            <div id="reviews" class="tab-content">
+                <h2>Customer Reviews</h2>
+                <div class="review-summary">
+                    <div class="rating-overview">
+                        <div class="average-rating">4.8 ⭐</div>
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span class="stars-label">5 ★</span>
+                                <div class="bar"><div class="fill" style="width: 70%"></div></div>
+                                <span class="count">70%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="stars-label">4 ★</span>
+                                <div class="bar"><div class="fill" style="width: 20%"></div></div>
+                                <span class="count">20%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="stars-label">3 ★</span>
+                                <div class="bar"><div class="fill" style="width: 7%"></div></div>
+                                <span class="count">7%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="stars-label">2 ★</span>
+                                <div class="bar"><div class="fill" style="width: 2%"></div></div>
+                                <span class="count">2%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span class="stars-label">1 ★</span>
+                                <div class="bar"><div class="fill" style="width: 1%"></div></div>
+                                <span class="count">1%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-list">
+                    <div class="review-card">
+                        <div class="review-head">
+                            <span class="review-rating">★★★★★</span>
+                            <span class="review-date">5 days ago</span>
+                        </div>
+                        <h4>Best phone I've owned!</h4>
+                        <p>Camera quality is exceptional. Battery lasts all day. Highly recommended.</p>
+                        <div class="review-helpful">
+                            <button>👍 (45)</button>
+                            <button>👎 (2)</button>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-head">
+                            <span class="review-rating">★★★★☆</span>
+                            <span class="review-date">1 week ago</span>
+                        </div>
+                        <h4>Great phone with minor issues</h4>
+                        <p>Overall very good. Heats up a bit during gaming. Price could be lower.</p>
+                        <div class="review-helpful">
+                            <button>👍 (23)</button>
+                            <button>👎 (5)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price History Tab -->
+            <div id="history" class="tab-content">
+                <h2>Price History</h2>
+                <div class="history-chart">
+                    <svg viewBox="0 0 500 200" class="chart-svg">
+                        <polyline points="50,150 100,120 150,100 200,110 250,80 300,60 350,70 400,50 450,40" 
+                                  fill="none" stroke="#4f46e5" stroke-width="3" stroke-linejoin="round"/>
+                        <line x1="50" y1="160" x2="450" y2="160" stroke="#ddd" stroke-width="1"/>
+                        <text x="50" y="180" font-size="12">30 days ago</text>
+                        <text x="450" y="180" font-size="12">Today</text>
+                    </svg>
+                </div>
+                <div class="price-history-list">
+                    <div class="history-item">
+                        <span>30 days ago</span>
+                        <span class="price">₹31,999</span>
+                    </div>
+                    <div class="history-item">
+                        <span>20 days ago</span>
+                        <span class="price">₹30,499</span>
+                    </div>
+                    <div class="history-item">
+                        <span>10 days ago</span>
+                        <span class="price">₹27,999</span>
+                    </div>
+                    <div class="history-item">
+                        <span>Today</span>
+                        <span class="price">₹25,999</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <section class="related-products">
+                <h2>You Might Also Like</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="card-top">
+                            <img src="/assets/related-1.jpg" alt="Related Product 1">
+                            <span class="badge">Best Deal</span>
+                        </div>
+                        <div class="card-body">
+                            <h3>Similar Product 1</h3>
+                            <p class="description">High quality alternative with great features</p>
+                            <div class="price-row">
+                                <span>₹22,999</span>
+                                <span class="pill">-15%</span>
+                            </div>
+                            <button class="action-btn">Compare</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card-top">
+                            <img src="/assets/related-2.jpg" alt="Related Product 2">
+                        </div>
+                        <div class="card-body">
+                            <h3>Similar Product 2</h3>
+                            <p class="description">Budget-friendly option with good specs</p>
+                            <div class="price-row">
+                                <span>₹18,999</span>
+                                <span class="pill">-20%</span>
+                            </div>
+                            <button class="action-btn">Compare</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="card-top">
+                            <img src="/assets/related-3.jpg" alt="Related Product 3">
+                        </div>
+                        <div class="card-body">
+                            <h3>Premium Alternative</h3>
+                            <p class="description">Top-tier features and performance</p>
+                            <div class="price-row">
+                                <span>₹45,999</span>
+                                <span class="pill">-10%</span>
+                            </div>
+                            <button class="action-btn">Compare</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 PriceCompare. All rights reserved.</p>
+    </footer>
+
+    <script src="auth-system.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

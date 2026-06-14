@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | PriceCompare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">PriceCompare</div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="product.html" class="nav-link">Products</a>
+            <a href="review.html" class="nav-link active">Reviews</a>
+            <a href="about.html" class="nav-link">About</a>
+            <button class="ghost" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="page-hero-content">
+                <h1>Product Reviews</h1>
+                <p>Verified customer feedback to help you decide</p>
+            </div>
+        </section>
+
+        <!-- Content -->
+        <section class="page-container">
+            <!-- Filter Section -->
+            <div class="reviews-filter">
+                <input type="text" id="searchReviews" placeholder="Search product reviews..." class="filter-input">
+                <select id="sortReviews" class="filter-select">
+                    <option value="recent">Most Recent</option>
+                    <option value="helpful">Most Helpful</option>
+                    <option value="rating-high">Highest Rating</option>
+                    <option value="rating-low">Lowest Rating</option>
+                </select>
+            </div>
+
+            <!-- Reviews List -->
+            <div class="reviews-container">
+                <!-- Review Item 1 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">👤</div>
+                            <div>
+                                <h4 class="reviewer-name">Rahul Kumar</h4>
+                                <p class="review-meta">Verified Purchase • 2 days ago</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="platform">Amazon</span>
+                        </div>
+                    </div>
+
+                    <h3 class="review-title">Excellent product, highly recommended!</h3>
+                    <p class="review-text">
+                        Great quality and fast delivery. The product is exactly as described on the website. 
+                        Packaging was excellent and it arrived in perfect condition. Would definitely buy again.
+                    </p>
+
+                    <div class="review-footer">
+                        <button class="helpful-btn">👍 Helpful (124)</button>
+                        <button class="helpful-btn">👎 Not Helpful (8)</button>
+                    </div>
+                </div>
+
+                <!-- Review Item 2 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">👤</div>
+                            <div>
+                                <h4 class="reviewer-name">Priya Singh</h4>
+                                <p class="review-meta">Verified Purchase • 5 days ago</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="platform">Flipkart</span>
+                        </div>
+                    </div>
+
+                    <h3 class="review-title">Good value for money</h3>
+                    <p class="review-text">
+                        Pretty good quality product. Delivery was on time. The only thing I would suggest is 
+                        to improve the packaging. Overall, satisfied with the purchase.
+                    </p>
+
+                    <div class="review-footer">
+                        <button class="helpful-btn">👍 Helpful (87)</button>
+                        <button class="helpful-btn">👎 Not Helpful (5)</button>
+                    </div>
+                </div>
+
+                <!-- Review Item 3 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">👤</div>
+                            <div>
+                                <h4 class="reviewer-name">Amit Patel</h4>
+                                <p class="review-meta">Verified Purchase • 1 week ago</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★☆☆</span>
+                            <span class="platform">Meesho</span>
+                        </div>
+                    </div>
+
+                    <h3 class="review-title">Average product, decent price</h3>
+                    <p class="review-text">
+                        The product works as expected but nothing extraordinary. Price is competitive compared 
+                        to other sellers. Delivery took a bit longer than promised.
+                    </p>
+
+                    <div class="review-footer">
+                        <button class="helpful-btn">👍 Helpful (34)</button>
+                        <button class="helpful-btn">👎 Not Helpful (12)</button>
+                    </div>
+                </div>
+
+                <!-- Review Item 4 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">👤</div>
+                            <div>
+                                <h4 class="reviewer-name">Neha Gupta</h4>
+                                <p class="review-meta">Verified Purchase • 2 weeks ago</p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="platform">Myntra</span>
+                        </div>
+                    </div>
+
+                    <h3 class="review-title">Perfect fit and great quality!</h3>
+                    <p class="review-text">
+                        Absolutely love this! The quality is premium and fit is perfect. Compare prices before 
+                        ordering - I saved ₹500 using PriceCompare. Highly recommended!
+                    </p>
+
+                    <div class="review-footer">
+                        <button class="helpful-btn">👍 Helpful (156)</button>
+                        <button class="helpful-btn">👎 Not Helpful (3)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Write Review Section -->
+            <section class="write-review-section">
+                <h2>Share Your Experience</h2>
+                <form class="review-form" onsubmit="submitReview(event)">
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName" placeholder="e.g., iPhone 15 Pro" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rating">Rating</label>
+                        <select id="rating" required>
+                            <option value="">Select rating</option>
+                            <option value="5">★★★★★ Excellent</option>
+                            <option value="4">★★★★☆ Good</option>
+                            <option value="3">★★★☆☆ Average</option>
+                            <option value="2">★★☆☆☆ Poor</option>
+                            <option value="1">★☆☆☆☆ Very Poor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="platform">Platform</label>
+                        <select id="platform" required>
+                            <option value="">Select platform</option>
+                            <option value="amazon">Amazon</option>
+                            <option value="flipkart">Flipkart</option>
+                            <option value="meesho">Meesho</option>
+                            <option value="myntra">Myntra</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewText">Your Review</label>
+                        <textarea id="reviewText" placeholder="Share your honest feedback..." rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-review-btn">Publish Review</button>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 PriceCompare. All rights reserved.</p>
+    </footer>
+
+    <script src="auth-system.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
